@@ -36,6 +36,7 @@ def delete
   @article = Article.find(params[:id])
   @article.destroy(article_params)
 flash.notice = "Article '#{@article.title}' Deleted!"
+ redirect_to article_path 'index.html.erb'
 end
 
 
