@@ -14,7 +14,8 @@ def new
 end
 
 def create
-   @article = Article.new(params[:article])
+  @article = Article.new(article_params)
+
   @article.save
   redirect_to article_path(@article)
 
