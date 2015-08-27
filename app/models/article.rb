@@ -3,11 +3,15 @@ class Article < ActiveRecord::Base
 	has_many :taggings
 has_many :tags, through: :taggings
 
-def tag_list=(tags_string)
-	  self.tags.collect do |tag|
+def tag_list
+  self.tags.collect do |tag|
     tag.name
-
-  tags.join(", ")
+  end.join(", ")
 end
+
+def tag_list=(tags_string)
+
+end
+
 
 end
