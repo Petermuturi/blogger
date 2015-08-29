@@ -12,6 +12,7 @@
     <li><%= link_to article.title, article_path(article) %></li>
   <% end %>
 </ul>
+<p><%= image_tag @article.image.url %></p>
 
 <p><%= @article.body %></p>
 <%= render partial: 'comments/form' %>
