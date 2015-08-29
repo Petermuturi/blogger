@@ -9,6 +9,7 @@ def show
 @article = Article.find(params[:id])
 @comment = Comment.new
 @comment.article_id = @article.id
+ @tag = Tag.find(params[:id])
 end
 
 def new
